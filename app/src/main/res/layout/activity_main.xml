@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".module.main.ui.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="#94ffffff"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.mn.gameassistant.common.widget.BottomMenu
+            android:id="@+id/btm_index"
+            style="@style/BottomMenu"
+            app:normalpic="@mipmap/icon_home"
+            app:presspic="@mipmap/icon_home_hover"
+            app:text="首页" />
+
+        <com.mn.gameassistant.common.widget.BottomMenu
+            android:id="@+id/btm_money"
+            style="@style/BottomMenu"
+            app:normalpic="@mipmap/ic_menu_03_nor"
+            app:presspic="@mipmap/ic_menu_03_hl"
+            app:text="赚钱" />
+
+        <com.mn.gameassistant.common.widget.BottomMenu
+            android:id="@+id/btm_guess"
+            style="@style/BottomMenu"
+            app:normalpic="@mipmap/ic_menu_01_nor"
+            app:presspic="@mipmap/ic_menu_01_hl"
+            app:text="竞猜" />
+
+        <com.mn.gameassistant.common.widget.BottomMenu
+            android:id="@+id/btm_shop"
+            style="@style/BottomMenu"
+            app:normalpic="@mipmap/ic_menu_04_nor"
+            app:presspic="@mipmap/ic_menu_04_hl"
+            app:text="商城" />
+
+        <com.mn.gameassistant.common.widget.BottomMenu
+            android:id="@+id/btm_me"
+            style="@style/BottomMenu"
+            app:normalpic="@mipmap/ic_menu_05_nor"
+            app:presspic="@mipmap/ic_menu_05_hl"
+            app:text="我的" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#87000000"
+        android:layout_above="@id/ll_bottom_menu"/>
+
+    <FrameLayout
+        android:id="@+id/fl_show"
+        android:layout_width="match_parent"
+        android:layout_above="@id/view"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+</RelativeLayout>

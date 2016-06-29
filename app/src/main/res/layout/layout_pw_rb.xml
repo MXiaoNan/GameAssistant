@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/shape_pw_rb">
+
+        <LinearLayout
+            android:id="@+id/ll_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/shape_pw_rb_top"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="获得新人专享1000U币红包"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="合计一元人民币"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="仅需一步红包就稳稳地落入你的腰包！"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_show"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@mipmap/newuser_redbag"
+                android:gravity="center"
+                android:paddingBottom="26dp"
+                android:text="1000"
+                android:textColor="#ff0000"
+                android:textSize="35sp" />
+
+            <Button
+                android:id="@+id/btn_pw_rb_reg"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/sel_reg_pw_rb"
+                android:text="立即注册"
+                android:textColor="#ff0000"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/tv_pw_rb_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="已有账号，立即登录！"
+                android:textColor="#B2260E"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="3dp"
+                android:background="@drawable/shape_pw_rb_reg" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:background="@mipmap/newuser_redbag_title"
+        android:gravity="center"
+        android:text="恭喜您，获得1000U币"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+</RelativeLayout>

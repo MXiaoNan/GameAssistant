@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">手游助手</string>
+    <string name="regText"><a href="gameass://">注册协议</a></string>
+</resources>
