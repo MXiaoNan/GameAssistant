@@ -63,10 +63,11 @@ public class MoneyFragment extends BaseFragment {
                 R.layout.layout_moneylist_item) {
             @Override
             public void convert(ViewHolder helper, int position, TaskGameInfo.InfoBean item) {
-                helper.setText(R.id.tv_game_title,item.getPlatform_name());
-                helper.setImageByUrl(R.id.iv_game_icon,item.getAd_img(),getActivity());
-                helper.setRating(R.id.rb_game_star,Integer.parseInt(item.getRank()));
-                helper.setText(R.id.tv_game_text,item.getDesc());
+                helper.setImageByUrl(R.id.iv_game_icon, item.getAd_img(), getActivity());
+                helper.setText(R.id.tv_game_title, item.getPlatform_name());
+                helper.setRating(R.id.rb_game_star, Integer.parseInt(item.getRank()));
+                helper.setText(R.id.tv_game_text, item.getDesc());
+                helper.setText(R.id.btn_game_money, item.getReward());
             }
         };
         mlvTackGame.setAdapter(mAdapter);
@@ -95,4 +96,6 @@ public class MoneyFragment extends BaseFragment {
             }
         });
     }
+
+
 }

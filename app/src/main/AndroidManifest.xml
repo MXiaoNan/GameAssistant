@@ -21,13 +21,7 @@
             <!--</intent-filter>-->
         </activity>
 
-        <activity android:name=".module.main.ui.MainActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".module.main.ui.MainActivity" />
 
         <activity android:name=".module.main.ui.RBActivity" />
 
@@ -35,15 +29,15 @@
 
         <activity android:name=".module.main.ui.LoginActivity" />
 
+        <activity android:name=".module.main.ui.AgreeTextActivity"/>
 
-        <activity android:name=".module.main.ui.AgreeTextActivity">
+        <activity android:name=".module.money.ui.MoneySecond">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <data android:scheme="gameass" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
