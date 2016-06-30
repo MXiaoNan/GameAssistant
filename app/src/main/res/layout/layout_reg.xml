@@ -24,11 +24,7 @@
             android:textSize="20sp" />
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginTop="5dp"
-        android:background="#76000000" />
+    <include layout="@layout/view_line"/>
 
     <EditText
         android:layout_width="match_parent"

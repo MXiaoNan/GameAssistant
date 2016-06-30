@@ -1,11 +1,14 @@
 package com.mn.gameassistant.module.money.ui;
 
+import android.content.Intent;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.PopupWindow;
+import android.widget.Toast;
 
 import com.mn.gameassistant.R;
 import com.mn.gameassistant.base.BaseFragment;
@@ -14,6 +17,7 @@ import com.mn.gameassistant.common.adapter.CommonAdapter;
 import com.mn.gameassistant.common.adapter.ViewHolder;
 import com.mn.gameassistant.module.money.bean.TaskGameInfo;
 import com.mn.gameassistant.module.money.dao.MoneyDao;
+import com.mn.gameassistant.module.mygames.ui.MyGameActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +33,7 @@ public class MoneyFragment extends BaseFragment {
     ListView mlvTackGame;
     CommonAdapter<TaskGameInfo.InfoBean> mAdapter;
     private List<TaskGameInfo.InfoBean> mListInfo;
+    private View headView;
 
     public void showLoadDialog() {
         if (!mLoad && (mPwLoad == null)) {
@@ -48,12 +53,12 @@ public class MoneyFragment extends BaseFragment {
     @Override
     protected void findViews(View view) {
         mViewFragment = view;
-        mlvTackGame = (ListView) view.findViewById(R.id.lv_view);
+        mlvTackGame = (ListView) view.findViewById(R.id.lv_money_view);
     }
 
     @Override
     protected void init() {
-        View headView = LayoutInflater.from(getActivity()).inflate(R.layout.layout_tasklist_head, null);
+        headView = LayoutInflater.from(getActivity()).inflate(R.layout.layout_tasklist_head, null);
         mlvTackGame.addHeaderView(headView);
 
         mviewPw = LayoutInflater.from(this.getActivity()).inflate(R.layout.layout_load_pw, null);
@@ -75,7 +80,23 @@ public class MoneyFragment extends BaseFragment {
 
     @Override
     protected void initEvent() {
-
+        mlvTackGame.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //Toast.makeText(getActivity(), "点击了..." + position, Toast.LENGTH_SHORT).show();
+                switch (position) {
+                    case 0:
+                        Intent intent = new Intent();
+                        intent.setClass(getActivity(), MyGameActivity.class);
+                        startActivity(intent);
+                        break;
+                }
+                for (int i = 0; i < position; i++) {
+                    Toast.makeText(getActivity(), "点击了..." + position, Toast.LENGTH_SHORT).show();
+                    break;
+                }
+            }
+        });
     }
 
     @Override
@@ -96,6 +117,4 @@ public class MoneyFragment extends BaseFragment {
             }
         });
     }
-
-
 }

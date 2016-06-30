@@ -9,14 +9,24 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <!--android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"-->
     <style name="BottomMenu">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">50dp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:onClick">onChose</item>
         <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!--搜索游戏页面样式-->
+    <style name="MyGame">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/sel_gameall_btn</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:textColor">@color/sel_btn_gameall</item>
     </style>
 </resources>
