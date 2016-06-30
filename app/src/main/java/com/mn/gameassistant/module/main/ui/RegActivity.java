@@ -29,7 +29,6 @@ public class RegActivity extends BaseActivity {
     @Override
     protected void findViews() {
         magree_text = (TextView) findViewById(R.id.agree_text);
-        magree_text.setTextColor(Color.BLUE);
         magree_text.setMovementMethod(new LinkMovementMethod());
 
         mtv_reg_back = (ImageButton) findViewById(R.id.tv_reg_back);
