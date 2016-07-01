@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/ib_money_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/sel_reg_back" />
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_search"
+            android:drawableRight="@mipmap/ic_input_search"
+            android:hint="搜游戏"
+            android:padding="10dp"
+            android:focusable="false"
+            android:textColorHint="#90cccccc" />
+    </LinearLayout>
+
+    <include layout="@layout/view_line" />
+
+    <RadioGroup
+        android:id="@+id/rg_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_game_all"
+            style="@style/MyGame"
+            android:checked="true"
+            android:text="全部游戏" />
+
+        <RadioButton
+            android:id="@+id/rb_game_new"
+            style="@style/MyGame"
+            android:text="未试玩" />
+
+        <RadioButton
+            android:id="@+id/rb_game_old"
+            style="@style/MyGame"
+            android:text="已试玩" />
+    </RadioGroup>
+
+    <include layout="@layout/view_line" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_allgame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp" />
+
+</LinearLayout>
