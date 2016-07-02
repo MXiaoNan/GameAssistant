@@ -21,7 +21,7 @@ import java.util.List;
  */
 public class NewGameFragment extends BaseFragment {
     private PullToRefreshListView mpull_lv;
-    private ArrayList<NewGameInfo.InfoBean> mNewList;
+    private List<NewGameInfo.InfoBean> mNewList;
     private CommonAdapter<NewGameInfo.InfoBean> mNewAdapter;
     private int miPage = 1;
 

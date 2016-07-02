@@ -36,11 +36,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_weight="1"
-            android:max="10"
             android:numStars="5"
             android:progressDrawable="@drawable/layout_ratingbar"
-            android:rating="3.5"
-            android:stepSize="0.5" />
+            android:rating="3.5" />
 
         <TextView
             android:id="@+id/tv_game_text"

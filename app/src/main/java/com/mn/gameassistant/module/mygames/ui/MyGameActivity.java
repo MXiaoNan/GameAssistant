@@ -30,6 +30,7 @@ public class MyGameActivity extends BaseActivity {
     private EditText met_search;
     private RadioGroup mrg_group;
 
+
     @Override
     protected int setViewID() {
         return R.layout.layout_mygame;
@@ -41,7 +42,6 @@ public class MyGameActivity extends BaseActivity {
         mib_money_back = (ImageButton) findViewById(R.id.ib_money_back);
         met_search = (EditText) findViewById(R.id.et_search);
         mrg_group = (RadioGroup) findViewById(R.id.rg_group);
-
     }
 
     @Override

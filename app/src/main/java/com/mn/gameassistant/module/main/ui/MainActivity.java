@@ -24,6 +24,7 @@ public class MainActivity extends BaseActivity {
 
     BottomMenu mLastMenu = null;
 
+
     @Override
     protected int setViewID() {
         return R.layout.activity_main;
@@ -32,6 +33,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void findViews() {
         mLastMenu = (BottomMenu) findViewById(R.id.btm_index);
+
     }
 
     @Override
@@ -60,6 +62,7 @@ public class MainActivity extends BaseActivity {
         transaction.hide(mMeFragment);
 
         transaction.add(R.id.fl_show, mIndexFragment);
+
         transaction.commit();
 
     }

@@ -8,7 +8,28 @@ public class Constant {
     public static final String LOGIN_FLAG = "ISLOGIN";
     public static final String MONEY_URL = "http://zhushou.72g.com/app/game/game_list/";
     public static final String LOGIN_URL = "http://www.yuu1.com/app_api/app_login";
+    public static final String USER_URL = "http://www.yuu1.com/app_api/user_info/";
 
+    public static final String USER_URL_JSON="{\n" +
+            "    \"info\": {\n" +
+            "        \"uid\": \"318529448\", \n" +
+            "        \"detail_address\": \"\", \n" +
+            "        \"hpic\": \"http://www.yuu1.com//data/avatar/avatar_1.png\", \n" +
+            "        \"nickname\": \"xiaonan\", \n" +
+            "        \"qq\": \"\", \n" +
+            "        \"receiver\": \"15617725828\", \n" +
+            "        \"sex\": \"1\", \n" +
+            "        \"phone\": \"15617725828\", \n" +
+            "        \"username\": \"15617725828\", \n" +
+            "        \"score\": \"1600\", \n" +
+            "        \"expend\": \"1600\", \n" +
+            "        \"code\": \"100888\", \n" +
+            "        \"invite_num\": 0, \n" +
+            "        \"today_profit\": \"50\"\n" +
+            "    }, \n" +
+            "    \"page\": null, \n" +
+            "    \"state\": \"success\"\n" +
+            "}";
     public static final String GAME_TASK_LIST_JSON = "{\n" +
             "\t\"info\": [{\n" +
             "\t\t\"id\": \"1\",\n" +

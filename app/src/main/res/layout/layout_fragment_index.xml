@@ -4,8 +4,248 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:background="@mipmap/safari_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="72G游戏助手"
+            android:textColor="#000000"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/gantanhao" />
+    </RelativeLayout>
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="首页" />
+        android:layout_height="30dp"
+        android:background="#C9C9C9"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:padding="3dp"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:singleLine="true"
+        android:text="玩家【q39**】兑换了骏网10元游戏充值卡。第53010期欢乐竞猜已经揭晓啦！大奖花落谁家，赶紧去看看吧！"
+        android:textColor="#ffffff" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--<ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/user_icon" />-->
+        <com.mn.gameassistant.module.home.view.CircleImageView
+            android:id="@+id/imageView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/user_icon" />
+
+        <TextView
+            android:id="@+id/tv_index_username"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_alignLeft="@+id/imageView"
+            android:layout_alignStart="@+id/imageView"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="40dp"
+            android:background="@drawable/shape_index1"
+            android:gravity="center"
+            android:text="xiaonan"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+
+
+    <TextView
+        style="@style/index_money_style"
+        android:text="账户余额(元)" />
+
+    <TextView
+        android:id="@+id/tv_user_balance"
+        style="@style/index_money_style"
+        android:text="1.55"
+        android:textColor="#000000" />
+
+    <LinearLayout
+        style="@style/index_money_style"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="合计U币  " />
+
+        <TextView
+            android:id="@+id/tv_index_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1550" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout style="@style/index_count_style">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="总收入(元)" />
+
+            <TextView
+                android:id="@+id/tv_index_money_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.55" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:background="#ccc" />
+
+        <LinearLayout style="@style/index_count_style">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="今日收益(元)" />
+
+            <TextView
+                android:id="@+id/tv_index_today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.05" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:background="#ccc" />
+
+        <LinearLayout style="@style/index_count_style">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="邀请好友数" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_index_start_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/sel_index_btn"
+        android:text="开始赚钱"
+        android:textColor="#ffffff"
+        android:textSize="25sp" />
+
+    <LinearLayout style="@style/index_bottom_layout">
+
+        <LinearLayout
+            style="@style/index_bottom_layin"
+            android:background="@drawable/shape_index1">
+
+            <TextView
+                style="@style/index_bottom_text"
+                android:text="手游礼包"
+                android:textSize="18sp" />
+
+            <TextView
+                style="@style/index_bottom_text"
+                android:text="免费礼包任性领"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/index_bottom_layin"
+            android:background="@drawable/shape_index2">
+
+            <TextView
+                style="@style/index_bottom_text"
+                android:text="每日签到"
+                android:textSize="18sp" />
+
+            <TextView
+                style="@style/index_bottom_text"
+                android:text="一键签到轻松拿奖"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/index_bottom_layout">
+
+        <LinearLayout
+            style="@style/index_bottom_layin"
+            android:background="@drawable/shape_index3">
+
+            <TextView
+                style="@style/index_bottom_text"
+                android:text="排行榜"
+                android:textSize="18sp" />
+
+            <TextView
+                style="@style/index_bottom_text"
+                android:text="高手对决你排第几"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/index_bottom_layin"
+            android:background="@drawable/shape_index4">
+
+            <TextView
+                style="@style/index_bottom_text"
+                android:text="四级好友"
+                android:textSize="18sp" />
+
+            <TextView
+                style="@style/index_bottom_text"
+                android:text="好友越多奖励越多"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

@@ -15,6 +15,7 @@ import com.mn.gameassistant.base.BaseFragment;
 import com.mn.gameassistant.base.ListViewCallBack;
 import com.mn.gameassistant.common.adapter.CommonAdapter;
 import com.mn.gameassistant.common.adapter.ViewHolder;
+import com.mn.gameassistant.module.money.adapter.MyMutilAdapter;
 import com.mn.gameassistant.module.money.bean.TaskGameInfo;
 import com.mn.gameassistant.module.money.dao.MoneyDao;
 import com.mn.gameassistant.module.mygames.ui.MyGameActivity;
@@ -31,7 +32,8 @@ public class MoneyFragment extends BaseFragment {
     View mviewPw;
     View mViewFragment;
     ListView mlvTackGame;
-    CommonAdapter<TaskGameInfo.InfoBean> mAdapter;
+    //    CommonAdapter<TaskGameInfo.InfoBean> mAdapter;
+    MyMutilAdapter myMutilAdapter;
     private List<TaskGameInfo.InfoBean> mListInfo;
     private View headView;
 
@@ -58,12 +60,13 @@ public class MoneyFragment extends BaseFragment {
 
     @Override
     protected void init() {
-        headView = LayoutInflater.from(getActivity()).inflate(R.layout.layout_tasklist_head, null);
-        mlvTackGame.addHeaderView(headView);
+        /*headView = LayoutInflater.from(getActivity()).inflate(R.layout.layout_tasklist_head, null);
+        mlvTackGame.addHeaderView(headView);*/
 
         mviewPw = LayoutInflater.from(this.getActivity()).inflate(R.layout.layout_load_pw, null);
         mListInfo = new ArrayList<>();
-        mAdapter = new CommonAdapter<TaskGameInfo.InfoBean>(getActivity(),
+
+        /*mAdapter = new CommonAdapter<TaskGameInfo.InfoBean>(getActivity(),
                 mListInfo,
                 R.layout.layout_moneylist_item) {
             @Override
@@ -74,8 +77,11 @@ public class MoneyFragment extends BaseFragment {
                 helper.setText(R.id.tv_game_text, item.getDesc());
                 helper.setText(R.id.btn_game_money, item.getReward());
             }
-        };
-        mlvTackGame.setAdapter(mAdapter);
+        };*/
+        /*mlvTackGame.setAdapter(mAdapter);*/
+
+        myMutilAdapter = new MyMutilAdapter(mListInfo, this.getActivity());
+        mlvTackGame.setAdapter(myMutilAdapter);
     }
 
     @Override
@@ -85,13 +91,13 @@ public class MoneyFragment extends BaseFragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //Toast.makeText(getActivity(), "点击了..." + position, Toast.LENGTH_SHORT).show();
                 switch (position) {
-                    case 0:
+                    case 1:
                         Intent intent = new Intent();
                         intent.setClass(getActivity(), MyGameActivity.class);
                         startActivity(intent);
                         break;
                 }
-                for (int i = 0; i < position; i++) {
+                for (int i = 2; i < position; i++) {
                     Toast.makeText(getActivity(), "点击了..." + position, Toast.LENGTH_SHORT).show();
                     break;
                 }
@@ -107,7 +113,7 @@ public class MoneyFragment extends BaseFragment {
                 List<TaskGameInfo.InfoBean> datas = (List<TaskGameInfo.InfoBean>) object;
                 mListInfo.addAll(datas);
 
-                mAdapter.notifyDataSetChanged();
+                myMutilAdapter.notifyDataSetChanged();
 
                 mLoad = true;
                 if (mPwLoad != null) {
